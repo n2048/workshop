@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+dependencies:
+  pre:
+    - docker info
+  override:
+    - git submodule update --init
+    - ls
+    - pwd
+    - cd ./workshop && npm install && docker build -t workshop .
+  cache_directories:
+    - "./workshop/node_modules"
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - echo 'deploying'
+      - ssh -v $SSH_USERNAME@$SSH_HOST "docker pull workshop"
