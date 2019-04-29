@@ -1,6 +1,9 @@
+
 version: 2
 jobs:
   build:
+    docker:
+      -image: node
     steps:
       - checkout
       - run:
@@ -11,6 +14,7 @@ jobs:
             docker push n2048/$IMAGE_NAME:$TAG
       
   deploy:
+    machine: true
     steps:
       - run:
           name: Deploy app to Digital Ocean Server via Docker
