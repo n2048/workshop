@@ -1,0 +1,22 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "Folder structure:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n2048/workshop.git"
+  },
+  "author": "n2048",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n2048/workshop/issues"
+  },
+  "homepage": "https://github.com/n2048/workshop#readme",
+  "dependencies": {
+    "nyc": "^14.0.0"
+  }
+}
